@@ -92,6 +92,24 @@ body {
   float: left;
 }
 
+@media (min-width: 740px) and (max-width: 980px) {
+  .container {
+    max-width: 720px;
+  }
+  .filtro {
+    width: 220px;
+  }
+}
+
+@media (max-width: 739px) {
+  .container {
+    max-width: 300px;
+  }
+  .filtro {
+    display: none;
+  }
+}
+
 .filtro h2 {
   font-size: 1.125em;
   padding: 10px 0;
@@ -193,6 +211,28 @@ body {
   font-weight: normal;
 }
 
+@media (min-width: 740px) and (max-width: 980px) {
+  /*O calculo para diminuir o width é o tamanho total do conatainer novo 720/12(quantidade de grids total)*8(quanto ocupa aquele container)-20(margin right and left) || 720/12*8-20*/
+  .produtos {
+    width: 460px;
+  }
+
+  .produtos li {
+    width: 220px;
+  }
+}
+
+@media (max-width: 739px) {
+  .produtos {
+    width: 300px;
+  }
+
+  .produtos li {
+    width: 140px;
+  }
+}
+
+/*FOOTER*/
 .footer {
   background: #e7e4d8;
   text-align: center;
