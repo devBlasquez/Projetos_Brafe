@@ -1,0 +1,69 @@
+body,
+p,
+h1,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: Georgia, serif;
+  color: #252525;
+  background: #e7e4d8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/*HEADER*/
+
+.header {
+  background: #d6d3c8;
+  padding: 20px;
+}
+
+.header::after,
+.header::before {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.header-logo {
+  float: left;
+}
+
+.header-menu ul {
+  float: right;
+}
+
+.header-menu li {
+  display: inline-block;
+}
+
+.header-menu li a {
+  color: #252525;
+  font-size: 1.125em;
+  padding: 10px;
+}
+
+/*IMPORTANTE: é selecionado o "first-child" no elemento "<li>" pq se fosse selecionado no elemento "<a>" iria ser aplicado em todos os elemento pq o "<a>" é o primeiro filho de cada "<li>", porém no "<ul>" existem vários filhos, assim sendo destacado o primeiro unicamente*/
+
+.header-menu li:first-child a {
+  padding-left: 0;
+}
