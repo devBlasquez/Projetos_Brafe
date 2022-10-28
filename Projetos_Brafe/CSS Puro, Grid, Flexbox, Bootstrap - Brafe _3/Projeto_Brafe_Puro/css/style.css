@@ -67,3 +67,161 @@ img {
 .header-menu li:first-child a {
   padding-left: 0;
 }
+
+/*MAIN*/
+
+.main-container::after,
+.main-container::before {
+  content: "";
+  display: table;
+  clear: both;
+}
+/*SIDE-NAV*/
+.side-nav {
+  width: 300px;
+  background: #252525;
+  float: left;
+}
+
+.side-nav li a {
+  display: block;
+  color: white;
+  border-bottom: 2px solid #484846;
+  font-size: 1.125em;
+  padding: 20px;
+}
+
+.side-nav li a::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  top: 5px;
+  margin-right: 15px;
+  background-image: url("../img/icones.png");
+}
+
+/*IMPORTANTE: para os ícones foi usado uma imagem "sprite" que se trata de uma imagem com todos os ícones, logo se faz necessário utilizar, a propriedade "background-position" para manipular a posição da imagem*/
+
+.nav-contabilidade::before {
+  /*background-position: (horizontal) (vertical);*/
+  background-position: 0 0;
+}
+
+.nav-produtos::before {
+  /*background-position: (horizontal) (vertical);*/
+  background-position: 0 -24px;
+}
+
+.nav-paginas::before {
+  /*background-position: (horizontal) (vertical);*/
+  background-position: 0 calc(-24 * 2);
+}
+
+.nav-plugins::before {
+  /*background-position: (horizontal) (vertical);*/
+  background-position: 0 -72px;
+}
+
+.nav-form::before {
+  /*background-position: (horizontal) (vertical);*/
+  background-position: 0 -96px;
+}
+
+.nav-hosp::before {
+  /*background-position: (horizontal) (vertical);*/
+  background-position: 0 -120px;
+}
+
+/*PRODUTOS*/
+
+.produtos {
+  float: left;
+  width: calc(100% - 300px);
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 20px;
+}
+
+.produtos header::after,
+.produtos header::before {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.produtos h1 {
+  font-size: 2.25em;
+  float: left;
+}
+
+.adicionar-produtos {
+  background: #c17139;
+  color: #e7e4d8;
+  font-size: 1.125em;
+  font-family: Courier, monospace;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 15px 20px;
+  border-radius: 4px;
+  float: right;
+  text-align: center;
+}
+
+.produtos-item {
+  background: #fff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.35);
+  margin-top: 20px;
+  position: relative;
+}
+
+.produtos-item::after,
+.produtos-item::before {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.produtos-item img {
+  float: left;
+}
+
+.produtos-item a {
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  text-indent: -200px;
+  /*A propriedade "position: absolute;" fica absoluta em relação ao pai q está "position:relative" que é a tag <li> - com classe produtos-item*/
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  background: url("../img/edit.svg") no-repeat;
+}
+
+.produtos-item a:hover {
+  background: url("../img/edit-hover.svg") no-repeat;
+}
+
+.produtos-item ul {
+  float: left;
+  padding: 0 20px;
+  width: calc(100% - 140px);
+}
+
+.produtos-item li {
+  padding: 10px 0;
+  font-family: Courier, monospace;
+  font-size: 1.125em;
+  border-bottom: 1px solid #e7e4d8;
+}
+
+.produtos-item li:last-child {
+  border: none;
+}
+
+.produtos-item span {
+  font-weight: bold;
+  display: inline-block;
+  width: 70px;
+}
