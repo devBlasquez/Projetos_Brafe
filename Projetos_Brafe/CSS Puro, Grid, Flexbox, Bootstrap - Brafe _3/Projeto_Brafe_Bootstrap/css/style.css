@@ -34,12 +34,7 @@ a {
 
 .header {
   background: #d6d3c8;
-  padding: 20px;
-  display: flex;
-}
-
-.header-logo {
-  flex-grow: 1;
+  padding: 20px 0;
 }
 
 .header-menu ul {
@@ -58,26 +53,15 @@ a {
 }
 
 @media (max-width: 739px) {
-  .header {
-    flex-direction: column;
-  }
-
-  .header-menu {
-    margin-top: 15px;
+  .header-menu ul {
+    margin-top: 10px;
   }
 }
 
-/*MAIN*/
-.main-container {
-  display: flex;
-}
 /*SIDE NAV*/
 
 .side-nav {
   background: #252525;
-  flex: 1;
-  max-width: 300px;
-  margin-right: 15px;
 }
 
 .side-nav li a {
@@ -123,40 +107,33 @@ a {
   background-position: 0 calc(-24px * 5);
 }
 
-@media (max-width: 739px) {
-  .main-container {
-    flex-direction: column;
-  }
-
+@media (max-width: 767px) {
   .side-nav {
-    margin: 10px;
     background: none;
-    max-width: 100%;
   }
 
   .side-nav ul {
+    margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
   }
 
-  .side-nav ul li {
+  .side-nav li {
     margin-right: 10px;
     margin-bottom: 10px;
   }
 
-  .side-nav ul li a::before {
-    margin: 0;
+  .side-nav li a::before {
     top: 0;
+    margin: 0;
   }
 
-  .side-nav ul li a {
+  .side-nav li a {
+    border: none;
+    overflow: hidden;
     width: 44px;
     height: 44px;
-    overflow: hidden;
-    border: none;
     padding: 10px;
-    /*A cor do texto e do fundo são as mesmas, pq mesmo usando o overflow o texto aparece um pouco, caso as cores sejam iguais ele não aparece mais*/
-    color: #252525;
     background: #252525;
     border-radius: 4px;
   }
@@ -165,18 +142,11 @@ a {
 /* Produtos */
 
 .produtos {
-  flex: 1;
-  padding: 20px 10px;
-}
-
-.produtos header {
-  display: flex;
 }
 
 .produtos h1 {
   font-size: 2.25em;
-  flex-grow: 1;
-  margin-right: 20px;
+  font-weight: bold;
 }
 
 .adicionar-produtos {
@@ -195,7 +165,6 @@ a {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.35);
   margin-top: 20px;
   position: relative;
-  display: flex;
 }
 
 .produtos-item a {
@@ -211,10 +180,6 @@ a {
 
 .produtos-item a:hover {
   background: url("../img/edit-hover.svg") no-repeat;
-}
-
-.produtos-item img {
-  align-self: flex-start;
 }
 
 .produtos-item ul {
@@ -238,14 +203,10 @@ a {
   display: inline-block;
 }
 
-@media (max-width: 739px) {
-  .produtos header {
-    flex-direction: column;
-  }
+@media (min-width: 740px) and (max-width: 980px) {
+}
 
-  .produtos-item {
-    flex-direction: column;
-  }
+@media (max-width: 739px) {
 }
 
 /*Footer*/
